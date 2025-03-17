@@ -1,12 +1,18 @@
 const { app, BrowserWindow } = require('electron')
+const path = require('node:path')
+//const Menu=app.Menu
 
 const createWindow = () => {
   const win = new BrowserWindow({
     width: 800,
-    height: 600
+    height: 600,
+    webPreferences: {
+      nodeIntegration: true,
+      preload: path.join(__dirname, 'js/preload.js')
+    }
   })
-
-  win.loadFile('index.html')
+  
+  win.loadFile('src/index.html')
 }
 
 app.whenReady().then(() => {

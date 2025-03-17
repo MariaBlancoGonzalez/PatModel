@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../css/style.css">
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <title>To Do List 👋</title>
+  </head>
+  <body>
+    <div class="header">
+      <h1 id="header1">To Do List 👋</h1>
+      <div class="inline">
+        <input type="text" id="input_header" name="input_principal"><br><br>
+        <button id="button_header">Add</button>
+      </div>
+    </div>
+    <p id="info"></p>
+  </body>
+  <script src="../js/renderer.js"></script>
+</html>
